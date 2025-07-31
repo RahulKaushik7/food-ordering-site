@@ -7,6 +7,8 @@
 
 .navbar .logo{
     width: 150px;
+    position: relative;
+    left: 60px;
 }
 
 .navbar-menu{
@@ -104,4 +106,25 @@
     .navbar-menu{
        display: none;
     }
+}
+/* Make navbar fixed on top */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Background on scroll */
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+  backdrop-filter: blur(10px); /* blur effect */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* To avoid content going under fixed navbar */
+body {
+  padding-top: 80px; /* adjust if your navbar is taller */
 }
